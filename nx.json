@@ -7,6 +7,7 @@
         "cacheableOperations": [
           "build",
           "lint",
+          "stylelint",
           "test",
           "e2e",
           "build-storybook"
@@ -32,6 +33,9 @@
         "{workspaceRoot}/.eslintignore"
       ]
     },
+    "stylelint": {
+      "inputs": ["default", "{workspaceRoot}/.stylelintrc.json"]
+    },
     "build-storybook": {
       "inputs": ["default", "^production", "!{projectRoot}/.storybook/**/*"]
     }
@@ -44,6 +48,7 @@
       "!{projectRoot}/tsconfig.spec.json",
       "!{projectRoot}/jest.config.[jt]s",
       "!{projectRoot}/.eslintrc.json",
+      "!{projectRoot}/.stylelintrc.json",
       "!{projectRoot}/**/*.stories.@(js|jsx|ts|tsx|mdx)",
       "!{projectRoot}/.storybook/**/*"
     ],

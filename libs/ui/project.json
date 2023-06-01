@@ -43,6 +43,13 @@
         "lintFilePatterns": ["libs/ui/**/*.ts", "libs/ui/**/*.html"]
       }
     },
+    "stylelint": {
+      "executor": "nx-stylelint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/ui/**/*.css"]
+      }
+    },
     "storybook": {
       "executor": "@storybook/angular:start-storybook",
       "options": {
