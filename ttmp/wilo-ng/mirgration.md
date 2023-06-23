@@ -1,0 +1,2 @@
+- Added missing packages to root
+  - Ignored tslint

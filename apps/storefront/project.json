@@ -19,8 +19,39 @@
           "apps/storefront/src/favicon.ico",
           "apps/storefront/src/assets"
         ],
-        "styles": ["apps/storefront/src/styles.scss"],
-        "scripts": []
+        "styles": [
+          "apps/storefront/src/styles.scss",
+          "apps/storefront/src/assets/css/animate.min.css",
+          "apps/storefront/src/assets/css/boxicons.min.css",
+          "apps/storefront/src/assets/css/fancybox.min.css",
+          "apps/storefront/src/assets/css/flaticon.css",
+          "apps/storefront/src/assets/css/magnific-popup.min.css",
+          "apps/storefront/src/assets/css/meanmenu.min.css",
+          "apps/storefront/src/assets/css/nice-select.min.css",
+          "apps/storefront/src/assets/css/rangeSlider.min.css",
+          "node_modules/bootstrap/scss/bootstrap.scss",
+          "node_modules/owl.carousel/dist/assets/owl.carousel.min.css",
+          "node_modules/owl.carousel/dist/assets/owl.theme.default.min.css",
+        ],
+        "scripts": [
+          "apps/storefront/src/assets/js/fancybox.min.js",
+          "apps/storefront/src/assets/js/isotope.pkgd.min.js",
+          "apps/storefront/src/assets/js/magnific-popup.min.js",
+          "apps/storefront/src/assets/js/meanmenu.min.js",
+          "apps/storefront/src/assets/js/nice-select.min.js",
+          "apps/storefront/src/assets/js/rangeSlider.min.js",
+          "apps/storefront/src/assets/js/TweenMax.min.js",
+          "apps/storefront/src/assets/js/ScrollMagic.min.js",
+          "apps/storefront/src/assets/js/animation.gsap.min.js",
+          "apps/storefront/src/assets/js/debug.addIndicators.min.js",
+          "apps/storefront/src/assets/js/sticky-sidebar.min.js",
+          "apps/storefront/src/assets/js/wow.min.js",
+          "apps/storefront/src/assets/js/main.js",
+          "node_modules/jquery/dist/jquery.min.js",
+          "node_modules/popper.js/dist/umd/popper.min.js",
+          "node_modules/bootstrap/dist/js/bootstrap.min.js",
+          "node_modules/owl.carousel/dist/owl.carousel.min.js"
+        ]
       },
       "configurations": {
         "production": {
