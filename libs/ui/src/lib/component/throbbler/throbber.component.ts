@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'ui-throbbler',
@@ -7,4 +7,6 @@ import { Component, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./throbber.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class ThrobberComponent {}
+export class ThrobberComponent {
+  @Input() visible = false;
+}

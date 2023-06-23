@@ -1,14 +1,15 @@
-import { Meta } from '@storybook/angular';
+import { Meta, StoryObj } from '@storybook/angular';
 import { ThrobberComponent } from './throbber.component';
 
-export default {
-  title: 'ThrobberComponent',
+const meta: Meta<ThrobberComponent> = {
   component: ThrobberComponent
-} as Meta<ThrobberComponent>;
+}
 
-export const Primary = {
-  render: (args: ThrobberComponent) => ({
-    props: args,
-  }),
-  args: {},
-};
+export default meta;
+type Story = StoryObj<ThrobberComponent>;
+
+export const Fade: Story = {
+  args: {
+    visible: true
+  }
+}
