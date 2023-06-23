@@ -1,28 +1,27 @@
-import { TestBed, waitForAsync } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { PreloaderComponent } from './components/layouts/preloader/preloader.component';
-import { NavbarComponent } from './components/layouts/navbar/navbar.component';
-import { FooterComponent } from './components/layouts/footer/footer.component';
+import { AppModule } from './app.module';
 
 describe('AppComponent', () => {
+  let fixture: ComponentFixture<AppComponent>;
+  let component: AppComponent;
+
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      declarations: [
-        AppComponent,
-        PreloaderComponent,
-        NavbarComponent,
-        FooterComponent
-      ],
+      imports: [AppModule],
+      declarations: [AppComponent],
     }).compileComponents();
+
+    fixture = TestBed.createComponent(AppComponent);
+    component = fixture.componentInstance;
   }));
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+  it('renders without errors', () => {
+    expect(component).toBeTruthy();
+  });
+
+  it('renders children components without errors', () => {
+    const children = fixture.debugElement.children.map(({name}) => name);
+    expect(children).toStrictEqual(['app-preloader', 'app-navbar', 'router-outlet', 'app-footer']);
   });
 });
