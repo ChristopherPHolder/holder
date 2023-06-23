@@ -18,7 +18,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "StorybookConfig",
-                "defaultValue": "{\r\n  stories: ['../**/*.stories.@(js|jsx|ts|tsx|mdx)'],\r\n  addons: ['@storybook/addon-essentials'],\r\n  framework: {\r\n    name: '@storybook/angular',\r\n    options: {},\r\n  },\r\n  docs: {\r\n    autodocs: true,\r\n    defaultName: 'Docs',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  stories: ['../**/*.stories.@(js|jsx|ts|tsx|mdx)'],\r\n  addons: [\r\n    '@storybook/addon-essentials',\r\n    '@storybook/addon-a11y'\r\n  ],\r\n  framework: {\r\n    name: '@storybook/angular',\r\n    options: {},\r\n  },\r\n  docs: {\r\n    autodocs: true,\r\n    defaultName: 'Docs',\r\n  },\r\n}"
+            },
+            {
+                "name": "Fade",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/ui/src/lib/component/throbbler/throbber.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    visible: true\r\n  }\r\n}"
             },
             {
                 "name": "meta",
@@ -27,18 +37,8 @@
                 "file": "libs/ui/src/lib/component/throbbler/throbber.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<>",
+                "type": "Meta<ThrobberComponent>",
                 "defaultValue": "{\r\n  component: ThrobberComponent\r\n}"
-            },
-            {
-                "name": "Primary",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/ui/src/lib/component/throbbler/throbber.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  args: {}\r\n}"
             }
         ],
         "functions": [],
@@ -47,7 +47,7 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<>",
+                "rawtype": "StoryObj<ThrobberComponent>",
                 "file": "libs/ui/src/lib/component/throbbler/throbber.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -66,10 +66,20 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "StorybookConfig",
-                    "defaultValue": "{\r\n  stories: ['../**/*.stories.@(js|jsx|ts|tsx|mdx)'],\r\n  addons: ['@storybook/addon-essentials'],\r\n  framework: {\r\n    name: '@storybook/angular',\r\n    options: {},\r\n  },\r\n  docs: {\r\n    autodocs: true,\r\n    defaultName: 'Docs',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  stories: ['../**/*.stories.@(js|jsx|ts|tsx|mdx)'],\r\n  addons: [\r\n    '@storybook/addon-essentials',\r\n    '@storybook/addon-a11y'\r\n  ],\r\n  framework: {\r\n    name: '@storybook/angular',\r\n    options: {},\r\n  },\r\n  docs: {\r\n    autodocs: true,\r\n    defaultName: 'Docs',\r\n  },\r\n}"
                 }
             ],
             "libs/ui/src/lib/component/throbbler/throbber.component.stories.ts": [
+                {
+                    "name": "Fade",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/ui/src/lib/component/throbbler/throbber.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    visible: true\r\n  }\r\n}"
+                },
                 {
                     "name": "meta",
                     "ctype": "miscellaneous",
@@ -77,18 +87,8 @@
                     "file": "libs/ui/src/lib/component/throbbler/throbber.component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Meta<>",
+                    "type": "Meta<ThrobberComponent>",
                     "defaultValue": "{\r\n  component: ThrobberComponent\r\n}"
-                },
-                {
-                    "name": "Primary",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "libs/ui/src/lib/component/throbbler/throbber.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {}\r\n}"
                 }
             ]
         },
@@ -100,7 +100,7 @@
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "StoryObj<>",
+                    "rawtype": "StoryObj<ThrobberComponent>",
                     "file": "libs/ui/src/lib/component/throbbler/throbber.component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
@@ -130,7 +130,7 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "meta",
+                "name": "Fade",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -140,7 +140,7 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "Primary",
+                "name": "meta",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
