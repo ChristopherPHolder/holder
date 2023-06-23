@@ -20,8 +20,7 @@ export class AppComponent implements OnInit {
     location?: string;
     routerSubscription?: Subscription;
 
-    constructor(private router: Router) {
-    }
+    constructor(private router: Router) {}
 
     ngOnInit(){
         this.recallJsFuntions();
