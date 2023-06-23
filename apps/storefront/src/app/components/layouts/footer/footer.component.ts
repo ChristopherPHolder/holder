@@ -15,13 +15,10 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
 })
 export class FooterComponent {
 
-    location: any;
-    footerClass: any;
+    location?: string;
+    footerClass?: string;
 
-    constructor(
-        private router: Router,
-        location: Location
-    ) {
+    constructor(private router: Router) {
         this.router.events
         .subscribe((event) => {
             if ( event instanceof NavigationEnd ) {
@@ -36,7 +33,4 @@ export class FooterComponent {
             }
         });
     }
-
-    ngOnInit(): void { }
-
 }

@@ -5,11 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './homepage-two.component.html',
   styleUrls: ['./homepage-two.component.scss']
 })
-export class HomepageTwoComponent {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}
+export class HomepageTwoComponent {}

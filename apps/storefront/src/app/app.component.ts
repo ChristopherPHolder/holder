@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router, NavigationStart, NavigationCancel, NavigationEnd } from '@angular/router';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { filter } from 'rxjs/operators';
 import * as $ from 'jquery';
+import { Subscription } from 'rxjs';
 
 @Component({
-    selector: 'storefront-root',
+    selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
     providers: [
@@ -15,9 +16,9 @@ import * as $ from 'jquery';
         }
     ]
 })
-export class AppComponent {
-    location: any;
-    routerSubscription: any;
+export class AppComponent implements OnInit {
+    location?: string;
+    routerSubscription?: Subscription;
 
     constructor(private router: Router) {
     }

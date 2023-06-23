@@ -6,9 +6,6 @@ import { Component } from '@angular/core';
     styleUrls: ['./related-case-studies.component.scss']
 })
 export class RelatedCaseStudiesComponent {
-
-
-
     sectionTitle = [
         {
             title: 'More Projects You Might Like'
@@ -37,7 +34,6 @@ export class RelatedCaseStudiesComponent {
             link: 'case-studies-details'
         }
     ]
-
 }
 
 

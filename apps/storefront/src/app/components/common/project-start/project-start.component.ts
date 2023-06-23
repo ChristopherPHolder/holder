@@ -15,17 +15,14 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
 })
 export class ProjectStartComponent {
 
-    location: any;
-    circleShape1Class: any;
-    vectorShape3Class: any;
-    vectorShape9Class: any;
-    vectorShape10Class: any;
-    sectionClass: any;
+    location?: string;
+    circleShape1Class?: string;
+    vectorShape3Class?: string;
+    vectorShape9Class?: string;
+    vectorShape10Class?: string;
+    sectionClass?: string;
 
-    constructor(
-        private router: Router,
-        location: Location
-    ) {
+    constructor(private router: Router) {
         this.router.events
         .subscribe((event) => {
             if ( event instanceof NavigationEnd ) {
