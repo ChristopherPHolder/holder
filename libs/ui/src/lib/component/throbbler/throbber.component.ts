@@ -1,4 +1,4 @@
-import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'ui-throbbler',
@@ -6,6 +6,7 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
   templateUrl: './throbber.component.html',
   styleUrls: ['./throbber.component.scss'],
   encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ThrobberComponent {
   @Input() visible = false;
