@@ -8,7 +8,6 @@ import { EventsPageComponent } from './components/pages/events-page/events-page.
 import { ErrorPageComponent } from './components/pages/error-page/error-page.component';
 import { CaseStudiesThreeColumnsPageComponent } from './components/pages/case-studies-three-columns-page/case-studies-three-columns-page.component';
 import { FooterComponent } from './components/layouts/footer/footer.component';
-import { PreloaderComponent } from './components/layouts/preloader/preloader.component';
 import { HomepageOneComponent } from './components/pages/homepage-one/homepage-one.component';
 import { SolutionsComponent } from './components/common/solutions/solutions.component';
 import { HomeoneServicesComponent } from './components/pages/homepage-one/homeone-services/homeone-services.component';
@@ -74,6 +73,7 @@ import { EventsSpeakersComponent } from './components/pages/events-details-page/
 import { CoursesPageComponent } from './components/pages/courses-page/courses-page.component';
 import { CoursesDetailsPageComponent } from './components/pages/courses-details-page/courses-details-page.component';
 import { RelatedCoursesComponent } from './components/pages/courses-details-page/related-courses/related-courses.component';
+import { ThrobberComponent } from '@holder/ui';
 
 @NgModule({
   declarations: [
@@ -83,7 +83,6 @@ import { RelatedCoursesComponent } from './components/pages/courses-details-page
     ErrorPageComponent,
     CaseStudiesThreeColumnsPageComponent,
     FooterComponent,
-    PreloaderComponent,
     HomepageOneComponent,
     SolutionsComponent,
     HomeoneServicesComponent,
@@ -152,7 +151,8 @@ import { RelatedCoursesComponent } from './components/pages/courses-details-page
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ThrobberComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

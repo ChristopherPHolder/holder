@@ -22,6 +22,6 @@ describe('AppComponent', () => {
 
   it('renders children components without errors', () => {
     const children = fixture.debugElement.children.map(({name}) => name);
-    expect(children).toStrictEqual(['app-preloader', 'app-navbar', 'router-outlet', 'app-footer']);
+    expect(children).toStrictEqual(['ui-throbbler', 'app-navbar', 'router-outlet', 'app-footer']);
   });
 });
