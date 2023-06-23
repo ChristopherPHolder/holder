@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'holder-root',
+  selector: 'storefront-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
