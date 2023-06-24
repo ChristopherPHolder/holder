@@ -73,7 +73,7 @@ import { EventsSpeakersComponent } from './components/pages/events-details-page/
 import { CoursesPageComponent } from './components/pages/courses-page/courses-page.component';
 import { CoursesDetailsPageComponent } from './components/pages/courses-details-page/courses-details-page.component';
 import { RelatedCoursesComponent } from './components/pages/courses-details-page/related-courses/related-courses.component';
-import { ThrobberComponent } from '@holder/ui';
+import { GoTopComponent, ThrobberComponent } from '@holder/ui';
 
 @NgModule({
 	declarations: [
@@ -149,7 +149,7 @@ import { ThrobberComponent } from '@holder/ui';
 		CoursesDetailsPageComponent,
 		RelatedCoursesComponent,
 	],
-	imports: [BrowserModule, AppRoutingModule, ThrobberComponent],
+  imports: [BrowserModule, AppRoutingModule, ThrobberComponent, GoTopComponent],
 	providers: [],
 	bootstrap: [AppComponent],
 })

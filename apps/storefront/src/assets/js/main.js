@@ -3,7 +3,7 @@
 
 	// Header Sticky
 	$(window).on('scroll',function() {
-		if ($(this).scrollTop() > 120){  
+		if ($(this).scrollTop() > 120){
 			$('.navbar-area').addClass("is-sticky");
 		}
 		else{
@@ -291,7 +291,7 @@
 
 	// Nice Select JS
 	$('select').niceSelect();
-	
+
 	// Price Range Slider JS
 	$(".js-range-of-price").ionRangeSlider({
 		type: "double",
@@ -308,7 +308,7 @@
 		btnDown = spinner.find('.minus-btn'),
 		min = input.attr('min'),
 		max = input.attr('max');
-		
+
 		btnUp.on('click', function() {
 			var oldValue = parseFloat(input.val());
 			if (oldValue >= max) {
@@ -341,7 +341,7 @@
 	(function ($) {
 		$('.tab ul.tabs').addClass('active').find('> li:eq(0)').addClass('current');
 		$('.tab ul.tabs li a').on('click', function (g) {
-			var tab = $(this).closest('.tab'), 
+			var tab = $(this).closest('.tab'),
 			index = $(this).closest('li').index();
 			tab.find('ul.tabs > li').removeClass('current');
 			$(this).closest('li').addClass('current');
@@ -350,19 +350,5 @@
 			g.preventDefault();
 		});
 	})(jQuery);
-
-	// Go to Top
-	$(function(){
-		// Scroll Event
-		$(window).on('scroll', function(){
-			var scrolled = $(window).scrollTop();
-			if (scrolled > 600) $('.go-top').addClass('active');
-			if (scrolled < 600) $('.go-top').removeClass('active');
-		});  
-		// Click Event
-		$('.go-top').on('click', function() {
-			$("html, body").animate({ scrollTop: "0" },  500);
-		});
-	});
 
 }(jQuery));

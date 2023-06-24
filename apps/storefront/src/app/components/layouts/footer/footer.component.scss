@@ -2,7 +2,7 @@
     padding-top: 100px;
     position: relative;
     z-index: 1;
-    
+
     &.bg-color {
         background-color: #fefcf8;
 
@@ -73,7 +73,7 @@
             a {
                 color: var(--optionalColor);
                 display: inline-block;
-                
+
                 &:hover {
                     color: var(--mainColor);
                 }
@@ -98,7 +98,7 @@
             a {
                 color: var(--optionalColor);
                 display: inline-block;
-                
+
                 &:hover {
                     color: var(--mainColor);
                 }
@@ -183,54 +183,6 @@
     }
 }
 
-/*================================================
-Go Top CSS
-=================================================*/
-.go-top {
-    position: fixed;
-    cursor: pointer;
-    bottom: -100px;
-    right: 20px;
-    color: var(--whiteColor);
-    background-color: var(--blackColor);
-    z-index: 4;
-    width: 45px;
-    text-align: center;
-    height: 45px;
-    opacity: 0;
-    visibility: hidden;
-    border-radius: 50%;
-    font-size: 22px;
-    transition: .9s;
-    overflow: hidden;
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
-
-    i {
-        position: absolute;
-        right: 0;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        text-align: center;
-        margin: {
-            left: auto;
-            right: auto;
-        };
-    }
-    &.active {
-        opacity: 1;
-        visibility: visible;
-        bottom: 20px;
-    }
-    &:hover {
-        background-color: var(--mainColor);
-        color: var(--whiteColor);
-        transition: var(--transition);
-        box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
-        transform: translateY(-5px);
-    }
-}
-
 @media only screen and (max-width: 767px) {
 
     .footer-area {
@@ -271,12 +223,6 @@ Go Top CSS
             }
         }
     }
-    .go-top {
-        width: 40px;
-        height: 40px;
-        font-size: 18px;
-    }
-
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -293,13 +239,6 @@ Go Top CSS
     .footer-bottom-area {
         margin-top: 50px;
     }
-
-    .go-top {
-        width: 40px;
-        height: 40px;
-        font-size: 19px;
-    }
-
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {

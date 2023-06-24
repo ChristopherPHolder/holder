@@ -5,8 +5,9 @@ import {
 	NavigationStart,
 	Router,
 } from '@angular/router';
-import { filter, map, shareReplay, tap } from 'rxjs/operators';
+import { debounceTime, filter, map, shareReplay, tap, throttleTime } from 'rxjs/operators';
 import * as $ from 'jquery';
+import { fromEvent } from 'rxjs';
 
 type NavigationEvents = NavigationStart | NavigationCancel | NavigationEnd;
 @Component({
@@ -28,7 +29,7 @@ export class AppComponent {
 		tap(
 			(event) =>
 				event instanceof NavigationEnd ||
-				window.scrollTo(0, 0) ||
+				this.goToTop() ||
 				$.getScript('../assets/js/main.js')
 		),
 		shareReplay()
@@ -59,5 +60,15 @@ export class AppComponent {
 				].includes(url)
 		),
 		map((url) => (url === '/about-us' ? 'bg-fffaf3' : 'bg-color'))
+	);
+
+	public goToTop(): void {
+		window.scrollTo(0, 0);
+	}
+
+	public showGoTop$ = fromEvent(window, 'scroll').pipe(
+		throttleTime(200),
+		debounceTime(200),
+		map(() => window.scrollY > 600)
 	);
 }
