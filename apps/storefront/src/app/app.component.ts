@@ -5,7 +5,14 @@ import {
 	NavigationStart,
 	Router,
 } from '@angular/router';
-import { debounceTime, filter, map, shareReplay, tap, throttleTime } from 'rxjs/operators';
+import {
+	debounceTime,
+	filter,
+	map,
+	shareReplay,
+	tap,
+	throttleTime,
+} from 'rxjs/operators';
 import * as $ from 'jquery';
 import { fromEvent } from 'rxjs';
 
@@ -66,9 +73,14 @@ export class AppComponent {
 		window.scrollTo(0, 0);
 	}
 
-	public showGoTop$ = fromEvent(window, 'scroll').pipe(
+	private scrollY$ = fromEvent(window, 'scroll').pipe(
 		throttleTime(200),
 		debounceTime(200),
-		map(() => window.scrollY > 600)
+		map(() => window.scrollY),
+		shareReplay()
 	);
+
+	public showGoTop$ = this.scrollY$.pipe(map((scrollY) => scrollY > 600));
+
+	public headerSticky$ = this.scrollY$.pipe(map((scrollY) => scrollY > 120));
 }

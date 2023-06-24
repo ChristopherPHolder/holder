@@ -1,5 +1,5 @@
 <ui-throbbler [visible]="(throbblerVisible$ | async) || false" />
-<app-navbar></app-navbar>
+<app-navbar [sticky]="(headerSticky$ | async) || false" />
 <router-outlet></router-outlet>
 <app-footer [bgClass]="(footerBgClass$ | async) || ''" />
 <ui-go-top [active]="(showGoTop$ | async) || false" (click)="goToTop()" />

@@ -1,16 +1,6 @@
 (function($){
 	"use strict";
 
-	// Header Sticky
-	$(window).on('scroll',function() {
-		if ($(this).scrollTop() > 120){
-			$('.navbar-area').addClass("is-sticky");
-		}
-		else{
-			$('.navbar-area').removeClass("is-sticky");
-		}
-	});
-
 	// Others Option Responsive JS
 	$(".others-option-for-responsive .dot-menu").on("click", function(){
 		$(".others-option-for-responsive .container .container").toggleClass("active");
