@@ -9,5 +9,5 @@ import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@a
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ThrobberComponent {
-  @Input() visible = false;
+  @Input() visible = true;
 }

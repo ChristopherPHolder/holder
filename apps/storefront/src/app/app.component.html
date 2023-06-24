@@ -1,4 +1,4 @@
-<ui-throbbler />
+<ui-throbbler [visible]="(navigating$ | async) || false" />
 <app-navbar></app-navbar>
 <router-outlet></router-outlet>
 <app-footer></app-footer>

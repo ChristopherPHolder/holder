@@ -1,18 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import {
-	Router,
-	NavigationStart,
 	NavigationCancel,
 	NavigationEnd,
+	NavigationStart,
+	Router,
 } from '@angular/router';
 import {
 	Location,
 	LocationStrategy,
 	PathLocationStrategy,
 } from '@angular/common';
-import { filter } from 'rxjs/operators';
+import { filter, map, tap } from 'rxjs/operators';
 import * as $ from 'jquery';
-import { Subscription } from 'rxjs';
 
 @Component({
 	selector: 'app-root',
@@ -27,36 +26,19 @@ import { Subscription } from 'rxjs';
 	],
 })
 export class AppComponent implements OnInit {
-	location?: string;
-	routerSubscription?: Subscription;
-
-	constructor(private router: Router) {}
+	public navigating$ = inject(Router).events.pipe(
+		filter(
+			(event) =>
+				event instanceof (NavigationStart || NavigationCancel || NavigationEnd)
+		),
+		map((event) => !(event instanceof NavigationStart)),
+		tap((navEnded) => navEnded || window.scrollTo(0, 0))
+	);
 
 	ngOnInit() {
-		this.recallJsFuntions();
-	}
-
-	recallJsFuntions() {
-		this.router.events.subscribe((event) => {
-			if (event instanceof NavigationStart) {
-				$('.preloader').fadeIn('slow');
-			}
-		});
-		this.routerSubscription = this.router.events
-			.pipe(
-				filter(
-					(event) =>
-						event instanceof NavigationEnd || event instanceof NavigationCancel
-				)
-			)
-			.subscribe((event) => {
-				$.getScript('../assets/js/main.js');
-				$('.preloader').fadeOut('slow');
-				this.location = this.router.url;
-				if (!(event instanceof NavigationEnd)) {
-					return;
-				}
-				window.scrollTo(0, 0);
-			});
+		// @TODO Remove this
+		// This is doing a lot of the animation or importing the ability to do them.
+		// Jquery should be removed completly but the animations be converted to css and ts
+		$.getScript('../assets/js/main.js');
 	}
 }
