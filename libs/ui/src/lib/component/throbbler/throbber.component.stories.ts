@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/angular';
 import { ThrobberComponent } from './throbber.component';
 
 const meta: Meta<ThrobberComponent> = {
+  title: 'Library/Components/Throbber',
   component: ThrobberComponent
 }
 
