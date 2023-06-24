@@ -22,34 +22,37 @@ import { CoursesPageComponent } from './components/pages/courses-page/courses-pa
 import { CoursesDetailsPageComponent } from './components/pages/courses-details-page/courses-details-page.component';
 
 const routes: Routes = [
-    {path: '', component: HomepageOneComponent},
-    {path: 'home-two', component: HomepageTwoComponent},
-    {path: 'home-three', component: HomepageThreeComponent},
-    {path: 'home-four', component: HomepageFourComponent},
-    {path: 'about-us', component: AboutPageComponent},
-    {path: 'team', component: TeamPageComponent},
-    {path: 'services', component: ServicesPageComponent},
-    {path: 'services-details', component: ServicesDetailsPageComponent},
-    {path: 'gallery', component: GalleryPageComponent},
-    {path: 'courses', component: CoursesPageComponent},
-    {path: 'courses-details', component: CoursesDetailsPageComponent},
-    {path: 'events', component: EventsPageComponent},
-    {path: 'events-details', component: EventsDetailsPageComponent},
-    {path: 'case-studies-3-columns', component: CaseStudiesThreeColumnsPageComponent},
-    {path: 'case-studies-details', component: CaseStudiesDetailsPageComponent},
-    {path: 'error', component: ErrorPageComponent},
-    {path: 'faq', component: FaqPageComponent},
-    {path: 'blog', component: BlogPageComponent},
-    {path: 'blog-details', component: BlogDetailsPageComponent},
-    {path: 'contact', component: ContactPageComponent},
-    
-    // Here add new component
-    
-    {path: '**', component: ErrorPageComponent} // This line will remain down from the whole component list
+	{ path: '', component: HomepageOneComponent },
+	{ path: 'home-two', component: HomepageTwoComponent },
+	{ path: 'home-three', component: HomepageThreeComponent },
+	{ path: 'home-four', component: HomepageFourComponent },
+	{ path: 'about-us', component: AboutPageComponent },
+	{ path: 'team', component: TeamPageComponent },
+	{ path: 'services', component: ServicesPageComponent },
+	{ path: 'services-details', component: ServicesDetailsPageComponent },
+	{ path: 'gallery', component: GalleryPageComponent },
+	{ path: 'courses', component: CoursesPageComponent },
+	{ path: 'courses-details', component: CoursesDetailsPageComponent },
+	{ path: 'events', component: EventsPageComponent },
+	{ path: 'events-details', component: EventsDetailsPageComponent },
+	{
+		path: 'case-studies-3-columns',
+		component: CaseStudiesThreeColumnsPageComponent,
+	},
+	{ path: 'case-studies-details', component: CaseStudiesDetailsPageComponent },
+	{ path: 'error', component: ErrorPageComponent },
+	{ path: 'faq', component: FaqPageComponent },
+	{ path: 'blog', component: BlogPageComponent },
+	{ path: 'blog-details', component: BlogDetailsPageComponent },
+	{ path: 'contact', component: ContactPageComponent },
+
+	// Here add new component
+
+	{ path: '**', component: ErrorPageComponent }, // This line will remain down from the whole component list
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes, {})],
-    exports: [RouterModule]
+	imports: [RouterModule.forRoot(routes, {})],
+	exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
