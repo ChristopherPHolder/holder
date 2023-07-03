@@ -1,0 +1,65 @@
+{
+	"name": "aws-simple-deploy",
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "libs/aws-simple-deploy/src",
+	"projectType": "library",
+	"targets": {
+		"build": {
+			"executor": "@nx/js:tsc",
+			"outputs": ["{options.outputPath}"],
+			"options": {
+				"outputPath": "dist/libs/aws-simple-deploy",
+				"main": "libs/aws-simple-deploy/src/index.ts",
+				"tsConfig": "libs/aws-simple-deploy/tsconfig.lib.json",
+				"assets": [
+					"libs/aws-simple-deploy/*.md",
+					{
+						"input": "./libs/aws-simple-deploy/src",
+						"glob": "**/!(*.ts)",
+						"output": "./src"
+					},
+					{
+						"input": "./libs/aws-simple-deploy/src",
+						"glob": "**/*.d.ts",
+						"output": "./src"
+					},
+					{
+						"input": "./libs/aws-simple-deploy",
+						"glob": "generators.json",
+						"output": "."
+					},
+					{
+						"input": "./libs/aws-simple-deploy",
+						"glob": "executors.json",
+						"output": "."
+					}
+				]
+			}
+		},
+		"lint": {
+			"executor": "@nx/linter:eslint",
+			"outputs": ["{options.outputFile}"],
+			"options": {
+				"lintFilePatterns": [
+					"libs/aws-simple-deploy/**/*.ts",
+					"libs/aws-simple-deploy/package.json"
+				]
+			}
+		},
+		"test": {
+			"executor": "@nx/jest:jest",
+			"outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+			"options": {
+				"jestConfig": "libs/aws-simple-deploy/jest.config.ts",
+				"passWithNoTests": true
+			},
+			"configurations": {
+				"ci": {
+					"ci": true,
+					"codeCoverage": true
+				}
+			}
+		}
+	},
+	"tags": []
+}
