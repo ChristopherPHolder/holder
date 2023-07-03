@@ -42,7 +42,8 @@
 			"options": {
 				"lintFilePatterns": [
 					"libs/aws-simple-deploy/**/*.ts",
-					"libs/aws-simple-deploy/package.json"
+					"libs/aws-simple-deploy/package.json",
+					"libs/aws-simple-deploy/executors.json"
 				]
 			}
 		},

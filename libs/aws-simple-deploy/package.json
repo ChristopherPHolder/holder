@@ -1,5 +1,6 @@
 {
 	"name": "@holder/aws-simple-deploy",
 	"version": "0.0.1",
-	"type": "commonjs"
+	"type": "commonjs",
+	"executors": "./executors.json"
 }
