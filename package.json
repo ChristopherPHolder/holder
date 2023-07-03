@@ -37,6 +37,7 @@
 		"@angular/cli": "~16.0.0",
 		"@angular/compiler-cli": "~16.0.0",
 		"@angular/language-service": "~16.0.0",
+		"@aws-sdk/client-s3": "^3.363.0",
 		"@compodoc/compodoc": "^1.1.21",
 		"@nx/cypress": "16.3.1",
 		"@nx/eslint-plugin": "16.3.1",

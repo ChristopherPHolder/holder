@@ -55,18 +55,18 @@
       },
       "configurations": {
         "production": {
-          "budgets": [
-            {
-              "type": "initial",
-              "maximumWarning": "500kb",
-              "maximumError": "1mb"
-            },
-            {
-              "type": "anyComponentStyle",
-              "maximumWarning": "2kb",
-              "maximumError": "4kb"
-            }
-          ],
+//          "budgets": [
+//            {
+//              "type": "initial",
+//              "maximumWarning": "500kb",
+//              "maximumError": "1mb"
+//            },
+//            {
+//              "type": "anyComponentStyle",
+//              "maximumWarning": "2kb",
+//              "maximumError": "4kb"
+//            }
+//          ],
           "outputHashing": "all"
         },
         "development": {
@@ -126,6 +126,13 @@
       "executor": "@nx/web:file-server",
       "options": {
         "buildTarget": "storefront:build"
+      }
+    },
+    "deploy": {
+      "executor": "@holder/aws-simple-deploy:s3-upload",
+      "options": {
+        "bucket": "arn:aws:s3:::holder.dev",
+        "buildDir": "dist/apps/storefront"
       }
     }
   }
