@@ -131,7 +131,7 @@
     "deploy": {
       "executor": "@holder/aws-simple-deploy:s3-upload",
       "options": {
-        "bucket": "arn:aws:s3:::holder.dev",
+        "bucket": "holder.dev",
         "buildDir": "dist/apps/storefront"
       }
     }
