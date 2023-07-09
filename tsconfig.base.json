@@ -15,6 +15,7 @@
 		"skipDefaultLibCheck": true,
 		"baseUrl": ".",
 		"paths": {
+			"@holder/aws-simple-deploy": ["libs/aws-simple-deploy/src/index.ts"],
 			"@holder/ui": ["libs/ui/src/index.ts"]
 		}
 	},
