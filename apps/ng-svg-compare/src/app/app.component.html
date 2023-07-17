@@ -1,1 +1,13 @@
-<router-outlet></router-outlet>
+<header>
+  <h1>
+    {{title}}
+  </h1>
+</header>
+<main>
+  <router-outlet></router-outlet>
+</main>
+<footer>
+  <nav>
+    <a *ngFor='let item of navItems'> {{item.title}}</a>
+  </nav>
+</footer>
